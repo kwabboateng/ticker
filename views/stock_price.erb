@@ -1,0 +1,13 @@
+<div class = "wrapper">
+<div class= "header"><p class="name-result"><%= @name %></p>
+<p class="buy-result">$<%= @buy%></p>
+</div>
+
+<div id='chart'>
+
+    <%= line_chart( @history, discrete: true, library:{ backgroundColor:'none', colors: ['white'], hAxis: {direction: '-1',textPosition: 'none', gridlines: {color:'transparent'}},
+                 vAxis: {viewWindowMode: 'pretty',textPosition: 'none', gridlines: {color:'transparent'} } }  ) %>
+</div>
+<button type="button" class="submit-btn" ><a href ="/">Check another stock </a></button>
+
+</div>
