@@ -4,6 +4,7 @@ require 'sinatra'
 require 'yahoofinance'
 require 'chartkick'
 require 'date'
+require 'stock_quote'
 
 get '/' do
     erb :form
@@ -30,6 +31,9 @@ post '/your-stock-price' do
     if @quote[@input].valid?
       @buy = @quote[@input].lastTrade
      # @sell = @quote[@input].ask
+     stock = StockQuote::Stock.quote(@input)
+      @percent_change = stock.percent_change
+
       erb :stock_price
     else
       erb :error

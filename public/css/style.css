@@ -18,7 +18,9 @@
 .buy-result {
     float: right;
 }
-
+.pc-result {
+    float: left;
+}
 body{
     background-color:#00B16A;
     font-family: 'Lato', sans-serif;
