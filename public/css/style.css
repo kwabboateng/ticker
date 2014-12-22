@@ -21,9 +21,17 @@
 .pc-result {
     float: left;
 }
+body.yellow{
+    background-color:#F9BF3B;
+}
+body.red{
+    background-color:#C0392B;
+
+}
 body{
     background-color:#00B16A;
     font-family: 'Lato', sans-serif;
+    color:#FFF;
 }
 
 .ticker{
@@ -32,16 +40,20 @@ body{
     color: #FFF;
     font-size: 35px;
 }
-#chart{
+.chart{
     margin: 80px 0;
     opacity: .55;
 }
-
+.pe_ratio{
+  opacity: 1;
+}
 .container{
     width: 800px;
 }
 
-
+.wall{
+  font-weight: bold;
+}
 
 .form-container{
      position: relative;
