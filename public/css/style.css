@@ -43,6 +43,9 @@ body{
 .msg {
   color: #FFF;
 }
+h4.msg {
+  opacity: 1;
+}
 .ticker{
     margin-top:50px;
     text-align:center;

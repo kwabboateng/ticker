@@ -34,7 +34,7 @@ post '/your-stock-price' do
       
       stock = StockQuote::Stock.quote(@input)
       @target_price = stock.oneyr_target_price
-
+      @percent_change = stock.percent_change
       url = 'https://www.kimonolabs.com/api/b9lszajm?apikey=fXtugRoRyvuslv1YDNFkzpHufv2KK6jO'
       url_s = "&s="+@input+"+Analyst+Opinion"
       response = JSON.parse(RestClient.get(url+url_s))

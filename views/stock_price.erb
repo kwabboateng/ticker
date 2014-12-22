@@ -7,11 +7,19 @@
 </div>
 
 <div class='chart'>
-
+<h4 class = "msg"><%= @percent_change %></h4>
     <%= line_chart( @history, discrete: true, library:{ backgroundColor:'none', colors: ['white'], hAxis: {direction: '-1',textPosition: 'none', gridlines: {color:'transparent'}},
                  vAxis: {viewWindowMode: 'pretty',textPosition: 'none', gridlines: {color:'transparent'} } }  ) %>
   </div>   
 <h3 class="msg"><%= @peInd %></h3>
+<p class="msg">PE Ratio is <%= @pe['company'] %>,
+	<% if @peInd == 'Cheap' %>
+		Lower
+	<%else %>
+		Higher
+	<%end%>
+	than the industry  <%= @pe['industry'] %> .
+</p>
 <div class='chart'>
      <%= column_chart( @pe, discrete: true, library:{ backgroundColor:'none', colors: ['white'], hAxis: {direction: '-1',textPosition: 'none', gridlines: {color:'transparent'}},
                  vAxis: {viewWindowMode: 'pretty',textPosition: 'none', gridlines: {color:'transparent'} } }  ) %>
