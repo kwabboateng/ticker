@@ -11,15 +11,17 @@
     <%= line_chart( @history, discrete: true, library:{ backgroundColor:'none', colors: ['white'], hAxis: {direction: '-1',textPosition: 'none', gridlines: {color:'transparent'}},
                  vAxis: {viewWindowMode: 'pretty',textPosition: 'none', gridlines: {color:'transparent'} } }  ) %>
   </div>   
-<h3 class="pe_ratio"><%= @peInd %></h3>
+<h3 class="msg"><%= @peInd %></h3>
 <div class='chart'>
      <%= column_chart( @pe, discrete: true, library:{ backgroundColor:'none', colors: ['white'], hAxis: {direction: '-1',textPosition: 'none', gridlines: {color:'transparent'}},
                  vAxis: {viewWindowMode: 'pretty',textPosition: 'none', gridlines: {color:'transparent'} } }  ) %>
 </div>
-
+<div class= "msg">
 <span>Target Price</span>
 <h3 class="target_price">$<%= @target_price %></h3>
 <p>Wall Street's Recommendation is <span class="wall"><%= @wallstreet%></span></p>
+</div>
+
 <button type="button" class="submit-btn" ><a href ="/">Check another stock </a></button>
 
 </div>
